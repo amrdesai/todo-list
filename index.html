@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>My Shopping List</h1>
+    </header>
+
+    <!-- Shopping List Input -->
+    <form>
+        <input type="text" class="shopping-input">
+        <button class="shopping-btn"><span>Add Item</span> <i class="material-icons">add</i></button>
+        <div class="selection">
+            <select name="shopping-list" class="filter-list">
+                <option value="all">All</option>
+                <option value="done">Done</option>
+                <option value="not-done">Not done</option>
+            </select>
+        </div>
+    </form> 
+
+    <!-- Shopping List Container -->
+    <div class="shopping-container">
+        <ul class="shopping-list"></ul>
+    </div>
+
+    
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+/* ALL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%)
+        no-repeat center center fixed;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    font-size: 1.5rem;
+}
+
+header,
+form {
+    min-height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form, Input and button */
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form input,
+form button {
+    padding: 0.5rem;
+    font-size: 1.75rem;
+    border: none;
+}
+
+/* Button */
+form button {
+    cursor: pointer;
+    color: #4158d0;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: #4158d0;
+    color: #fff;
+}
+
+/* Icon */
+i {
+    position: relative;
+    top: 3px;
+}
+
+/* Shopping list container*/
+.shopping-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Shopping List (ul) */
+.shopping-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+/* Shopping list item div - div in ul */
+.shopping-item {
+    margin: 0.5rem;
+    background-color: #fff;
+    color: #000;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .5s ease;
+}
+
+/* Shopping list item li */
+.list-item {
+    flex: 1;
+    padding: 0 0.5rem;
+}
+
+/* Completed button & Delete button*/
+.done-btn,
+.delete-btn {
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.done-btn:focus,
+.delete-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.done-btn {
+    color: #fff;
+    background-color: #49cc49;
+}
+
+.delete-btn {
+    color: rgb(136, 44, 44);
+    background: #ffcc70;
+}
+
+/* Removing pointer click */
+.done-btn i, .delete-btn i {
+    pointer-events: none;
+}
+
+/* Done - class */
+.done {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+/* Delete animation class */
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+/* Styling select & options */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: #c850c0;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.selection {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.selection::after {
+    content: "\25BC";
+    position: absolute;
+    background: #ffcc70;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.selection:hover::after {
+    background: #c850c0;
+    color: #ffcc70;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1000px) {
+    .shopping-list {
+        min-width: 50%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .shopping-list {
+        width: 98%;
+    }
+}
