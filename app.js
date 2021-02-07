@@ -1,3 +1,6 @@
+// Strict mode
+'use strict';
+
 // Selectors
 const shoppingInput = document.querySelector('.shopping-input');
 const shoppingListBtn = document.querySelector('.shopping-btn');
